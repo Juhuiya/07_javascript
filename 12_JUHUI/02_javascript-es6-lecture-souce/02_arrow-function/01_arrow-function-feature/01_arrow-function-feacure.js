@@ -22,12 +22,12 @@ theater.showMovieList();
 // 2. 화살표 함수는 new와 함께 호출할 수 없다.
 //const arrowFunc = function() {};//과 같음
 const arrowFunc = () => {}; // this를 안가지고 있다? constructor가 없으니 사용할 수 없다.
-//new arrowFunc();
+//new arrowFunc(); // TypeError: arrowFunc is not a constructor
 console.log(arrowFunc.hasOwnProperty("prototype"));
 
 // 3. 화살표 함수는 super를 가지지 않는다.
 class Animal {
-  static planet = "지구";
+  //static planet = "지구";
 
   constructor(name, weight) {
     this.name = name;
